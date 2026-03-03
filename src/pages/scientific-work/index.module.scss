@@ -1,0 +1,252 @@
+@use '../../styles/vars' as *;
+
+.page {
+    padding: $space-10 0 $space-16;
+
+    @include mobile {
+        padding: $space-6 0 $space-10;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+
+    @include mobile {
+        padding: 0 $space-4;
+        gap: $space-8;
+    }
+}
+
+.page_header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $color-border;
+}
+
+.page_title {
+    font-size: $fs-4xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-tight;
+
+    @include mobile {
+        font-size: $fs-2xl;
+    }
+}
+
+.page_subtitle {
+    font-size: $fs-md;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+}
+
+// ============================================================
+// ACCORDION
+// ============================================================
+
+.section {
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-xs;
+}
+
+.section_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: $space-5 $space-6;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: $font-primary;
+    text-align: left;
+    gap: $space-4;
+    transition: background-color $transition-fast;
+
+    &:hover {
+        background: $color-teal-light;
+    }
+
+    &_open {
+        background: $color-teal-light;
+        border-bottom: 1px solid $color-border-light;
+    }
+}
+
+.section_toggle_left {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+}
+
+.section_icon {
+    color: $color-teal-dark;
+    flex-shrink: 0;
+}
+
+.section_name {
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-primary;
+}
+
+.section_toggle_right {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    flex-shrink: 0;
+}
+
+.section_count {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    color: $color-text-muted;
+    background: $color-bg-section;
+    padding: 2px $space-3;
+    border-radius: $radius-full;
+    white-space: nowrap;
+
+    .section_toggle_open & {
+        background: rgba(61, 191, 160, 0.15);
+        color: $color-teal-dark;
+    }
+}
+
+.chevron {
+    color: $color-text-muted;
+    transition: transform $transition-base;
+    flex-shrink: 0;
+
+    &_open {
+        transform: rotate(-180deg);
+    }
+}
+
+.section_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+
+    &_open {
+        max-height: 9999px;
+    }
+}
+
+.section_inner {
+    padding: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+
+    @include mobile {
+        padding: $space-4;
+    }
+}
+
+// ============================================================
+// PUBLICATIONS
+// ============================================================
+
+.pub_list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    padding-left: $space-6;
+    margin: 0;
+}
+
+.pub_item {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+
+    &::marker {
+        color: $color-teal-dark;
+        font-weight: $fw-bold;
+    }
+}
+
+.pub_link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: $fs-xs;
+    font-weight: $fw-semibold;
+    color: $color-teal-dark;
+    background: $color-teal-light;
+    padding: 2px $space-2;
+    border-radius: $radius-sm;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+    transition: all $transition-fast;
+
+    &:hover {
+        background: rgba(61, 191, 160, 0.25);
+    }
+}
+
+// ============================================================
+// PROFILES
+// ============================================================
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    padding-top: $space-4;
+    border-top: 1px solid $color-border-light;
+}
+
+.profiles_label {
+    font-size: $fs-sm;
+    font-weight: $fw-semibold;
+    color: $color-text-primary;
+}
+
+.profiles_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-3;
+}
+
+.profile_link {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-2;
+    padding: $space-3 $space-5;
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    color: $color-teal-dark;
+    transition: all $transition-fast;
+
+    &:hover {
+        background: $color-teal-light;
+        border-color: $color-teal;
+    }
+}

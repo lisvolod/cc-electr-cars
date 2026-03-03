@@ -12,6 +12,7 @@ import { Subjects } from './pages/subjects'
 import { MethodicalRecommendations } from './pages/methodical-recommendations'
 import { QualificationWorkDp } from './pages/qualification-work-dp'
 import { Practices } from './pages/practices'
+import { ScientificWork } from './pages/scientific-work'
 
 import { Stub } from './pages/stub'
 
@@ -29,7 +30,7 @@ const STUB_ROUTES = [
   // { path: '/methodological-recommendations-for-KP',   title: 'Методичні рекомендації до КР' },
   // { path: '/qualification-work-dp',                   title: 'Кваліфікаційна робота (ДП)' },
   // { path: '/practices',                               title: 'Практики' },
-  { path: '/scientific-work',                         title: 'Наукові роботи' },
+  // { path: '/scientific-work',                         title: 'Наукові роботи' },
   { path: '/our-achievements',                        title: 'Наші досягнення' },
   { path: '/student-leisure-time',                    title: 'Студентське дозвілля' },
   { path: '/contacts',                                title: 'Контакти' },
@@ -52,6 +53,7 @@ function App() {
         <Route path="/methodical-recommendations" element={<MethodicalRecommendations />} />
         <Route path="/qualification-work-dp" element={<QualificationWorkDp />} />
         <Route path="/practices" element={<Practices />} />
+        <Route path="/scientific-work" element={<ScientificWork />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route
