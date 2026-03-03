@@ -17,6 +17,7 @@ import { OurAchievements } from './pages/our-achievements'
 import { OurGraduates } from './pages/our-graduates'
 import { StudentLeisureTime } from './pages/student-leisure-time'
 import { Contacts } from './pages/contacts'
+import { NotFound } from './pages/not-found'
 
 // import { Stub } from './pages/stub'
 
@@ -63,6 +64,7 @@ function App() {
         <Route path="/our-achievements" element={<OurAchievements />} />
         <Route path="/student-leisure-time" element={<StudentLeisureTime />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="*" element={<NotFound />} />
 
         {/* {STUB_ROUTES.map(({ path, title }) => (
           <Route
