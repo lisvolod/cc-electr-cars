@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/home'
+import { CompositionCC } from './pages/composition-cc'
 import { Stub } from './pages/stub'
 
 // Сторінки які ще не переписані — тимчасово показуємо заглушку
 const STUB_ROUTES = [
   { path: '/history-cc',                              title: 'Історія ЦК' },
-  { path: '/composition-cc',                          title: 'Склад ЦК' },
+  // { path: '/composition-cc',                          title: 'Склад ЦК' },
   { path: '/certification-training',                  title: 'Підвищення кваліфікації' },
   { path: '/material-and-technical-base-cc',          title: 'Матеріально-технічна база' },
   { path: '/specialty',                               title: 'Спеціальність' },
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/composition-cc" element={<CompositionCC />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route

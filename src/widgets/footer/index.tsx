@@ -24,8 +24,8 @@ const CONTACTS = [
   {
     icon: Phone,
     label: 'Телефон',
-    value: '096 182 88 13',
-    href: 'tel:+380961828813',
+    value: '066 923 48 81',
+    href: 'tel:+380669234881',
   },
   {
     icon: Globe,
@@ -36,7 +36,7 @@ const CONTACTS = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'cs@tk.te.ua',
+    value: 'ck141eee@gmail.com',
     href: 'mailto:cs@tk.te.ua',
   },
 ]

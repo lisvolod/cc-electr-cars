@@ -1,0 +1,269 @@
+@use '../../styles/vars' as *;
+
+.page {
+    padding: $space-10 0 $space-16;
+
+    @include mobile {
+        padding: $space-6 0 $space-10;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+
+    @include mobile {
+        padding: 0 $space-4;
+    }
+}
+
+// ============================================================
+// PAGE HEADER
+// ============================================================
+
+.page_header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $color-border;
+}
+
+.page_title {
+    font-size: $fs-4xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-tight;
+
+    @include mobile {
+        font-size: $fs-2xl;
+    }
+}
+
+.page_subtitle {
+    font-size: $fs-md;
+    color: $color-text-secondary;
+}
+
+// ============================================================
+// GRID
+// ============================================================
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+}
+
+// ============================================================
+// CARD
+// ============================================================
+
+.card {
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-sm;
+    overflow: hidden;
+    transition: box-shadow $transition-base;
+
+    &:hover {
+        box-shadow: $shadow-md;
+    }
+}
+
+.card_top {
+    display: flex;
+    gap: $space-6;
+    padding: $space-6;
+    align-items: flex-start;
+
+    @include mobile {
+        gap: $space-4;
+    }
+}
+
+// Фото
+.card_photo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid $color-border-light;
+
+    @include mobile {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+.card_photo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.card_photo_placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-teal-light;
+    color: $color-teal-dark;
+}
+
+// Інфо
+.card_info {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    flex: 1;
+}
+
+.card_name {
+    font-size: $fs-xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-snug;
+
+    @include mobile {
+        font-size: $fs-lg;
+    }
+}
+
+.card_role {
+    font-size: $fs-sm;
+    color: $color-teal-dark;
+    font-weight: $fw-medium;
+    line-height: $lh-snug;
+}
+
+.card_born {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+    font-size: $fs-xs;
+    color: $color-text-muted;
+    margin-top: $space-1;
+}
+
+// ============================================================
+// TOGGLE BUTTON
+// ============================================================
+
+.card_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: $space-3 $space-6;
+    border-top: 1px solid $color-border-light;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    color: $color-text-secondary;
+    cursor: pointer;
+    background: $color-bg-section;
+    transition: all $transition-fast;
+    font-family: $font-primary;
+
+    &:hover {
+        color: $color-teal-dark;
+        background: $color-teal-light;
+    }
+
+    &_open {
+        color: $color-teal-dark;
+        background: $color-teal-light;
+        border-bottom: 1px solid $color-border-light;
+    }
+}
+
+.toggle_chevron {
+    transition: transform $transition-base;
+
+    &_open {
+        transform: rotate(-180deg);
+    }
+}
+
+// ============================================================
+// DETAILS (розгортання)
+// ============================================================
+
+.card_details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+
+    &_open {
+        max-height: 800px;
+    }
+}
+
+.card_details_inner {
+    padding: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+
+    @include mobile {
+        padding: $space-4;
+    }
+}
+
+.detail_section {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+}
+
+.detail_section_title {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    font-size: $fs-sm;
+    font-weight: $fw-semibold;
+    color: $color-text-primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    svg {
+        color: $color-teal;
+        flex-shrink: 0;
+    }
+}
+
+.detail_list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    list-style: none;
+    padding: 0;
+}
+
+.detail_item {
+    position: relative;
+    padding-left: $space-4;
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $color-teal;
+        flex-shrink: 0;
+    }
+}
