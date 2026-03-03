@@ -1,0 +1,345 @@
+@use '../../styles/vars' as *;
+
+.page {
+    padding: $space-10 0 $space-16;
+
+    @include mobile {
+        padding: $space-6 0 $space-10;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-12;
+
+    @include mobile {
+        padding: 0 $space-4;
+        gap: $space-8;
+    }
+}
+
+// ============================================================
+// HEADER
+// ============================================================
+
+.page_header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $color-border;
+}
+
+.page_title {
+    font-size: $fs-4xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-tight;
+
+    @include mobile {
+        font-size: $fs-2xl;
+    }
+}
+
+.page_subtitle {
+    font-size: $fs-md;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+// ============================================================
+// OPP BANNER
+// ============================================================
+
+.opp_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-6;
+    padding: $space-6 $space-8;
+    background: $gradient-subtle;
+    border: 1px solid $color-teal;
+    border-left: 4px solid $color-teal;
+    border-radius: $radius-lg;
+    transition: all $transition-base;
+
+    &:hover {
+        background: $color-teal-light;
+        box-shadow: $shadow-md;
+        transform: translateY(-1px);
+    }
+
+    @include mobile {
+        padding: $space-5;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $space-4;
+    }
+}
+
+.opp_banner_text {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+}
+
+.opp_banner_label {
+    font-size: $fs-xs;
+    font-weight: $fw-semibold;
+    color: $color-teal-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.opp_banner_title {
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-primary;
+    line-height: $lh-snug;
+}
+
+.opp_banner_note {
+    font-size: $fs-sm;
+    color: $color-text-muted;
+}
+
+.opp_banner_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: $radius-md;
+    background: $color-teal-light;
+    color: $color-teal-dark;
+    flex-shrink: 0;
+}
+
+// ============================================================
+// INFO GRID
+// ============================================================
+
+.info_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.info_item {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+    padding: $space-4 $space-5;
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    border-left: 3px solid $color-teal;
+}
+
+.info_label {
+    font-size: $fs-xs;
+    font-weight: $fw-semibold;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info_value {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-primary;
+    line-height: $lh-snug;
+}
+
+// ============================================================
+// SECTION
+// ============================================================
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: $space-5;
+}
+
+.section_title {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    font-size: $fs-xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+
+    svg {
+        color: $color-teal;
+        flex-shrink: 0;
+    }
+}
+
+.section_lead {
+    font-size: $fs-base;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+// ============================================================
+// CHECK LIST
+// ============================================================
+
+.check_list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    list-style: none;
+    padding: 0;
+}
+
+.check_item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+.check_icon {
+    color: $color-teal;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+// ============================================================
+// COMPETENCIES
+// ============================================================
+
+.competencies_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.competency_item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+    padding: $space-4;
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    transition: all $transition-base;
+
+    &:hover {
+        border-color: $color-teal;
+        box-shadow: $shadow-sm;
+    }
+}
+
+.competency_num {
+    font-size: $fs-xs;
+    font-weight: $fw-bold;
+    color: $color-teal-dark;
+    background: $color-teal-light;
+    padding: 2px $space-2;
+    border-radius: $radius-sm;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.competency_text {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+// ============================================================
+// OUTCOMES
+// ============================================================
+
+.outcomes_list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+    list-style: none;
+    padding: 0;
+    counter-reset: outcomes;
+}
+
+.outcome_item {
+    position: relative;
+    left: 28px;
+    padding-left: $space-5;
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $gradient-brand;
+        flex-shrink: 0;
+    }
+}
+
+// ============================================================
+// POSITIONS
+// ============================================================
+
+.positions_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.position_item {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-3;
+    padding: $space-4;
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    transition: all $transition-base;
+
+    &:hover {
+        border-color: $color-teal;
+        box-shadow: $shadow-sm;
+    }
+}
+
+.position_num {
+    font-size: $fs-xs;
+    font-weight: $fw-bold;
+    color: $color-teal-dark;
+    background: $color-teal-light;
+    padding: 2px $space-2;
+    border-radius: $radius-sm;
+    flex-shrink: 0;
+}
+
+.position_text {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    line-height: $lh-snug;
+    font-weight: $fw-medium;
+}

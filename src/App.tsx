@@ -5,6 +5,9 @@ import { CompositionCC } from './pages/composition-cc'
 import { HistoryCC } from './pages/history-cc'
 import { CertificationTraining } from './pages/certification-training'
 import { MaterialBase } from './pages/material-and-technical-base-cc'
+import { Specialty } from './pages/specialty'
+import { OurStakeholders } from './pages/our-stakeholders'
+import { EducationalAndProfessionalPrograms } from './pages/educational-and-professional-programs'
 
 import { Stub } from './pages/stub'
 
@@ -14,9 +17,9 @@ const STUB_ROUTES = [
   // { path: '/composition-cc',                          title: 'Склад ЦК' },
   // { path: '/certification-training',                  title: 'Підвищення кваліфікації' },
   // { path: '/material-and-technical-base-cc',          title: 'Матеріально-технічна база' },
-  { path: '/specialty',                               title: 'Спеціальність' },
-  { path: '/our-stakeholders',                        title: 'Наші стейкхолдери' },
-  { path: '/our-graduates',                           title: 'Наші випускники' },
+  // { path: '/specialty',                               title: 'Спеціальність' },
+  // { path: '/our-stakeholders',                        title: 'Наші стейкхолдери' },
+  // { path: '/our-graduates',                           title: 'Наші випускники' },
   { path: '/educational-and-professional-programs',   title: 'Освітньо-професійні програми' },
   { path: '/syllabuses',                              title: 'Дисципліни (силабуси)' },
   { path: '/methodological-recommendations-for-KP',   title: 'Методичні рекомендації до КР' },
@@ -38,6 +41,9 @@ function App() {
         <Route path="/history-cc" element={<HistoryCC />} />
         <Route path="/certification-training" element={<CertificationTraining />} />
         <Route path="/material-and-technical-base-cc" element={<MaterialBase />} />
+        <Route path="/specialty" element={<Specialty />} />
+        <Route path="/our-stakeholders" element={<OurStakeholders />} />
+        <Route path="/educational-and-professional-programs" element={<EducationalAndProfessionalPrograms />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route
