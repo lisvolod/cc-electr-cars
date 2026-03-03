@@ -1,0 +1,184 @@
+@use '../../styles/vars' as *;
+
+.page {
+    padding: $space-10 0 $space-16;
+
+    @include mobile {
+        padding: $space-6 0 $space-10;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+
+    @include mobile {
+        padding: 0 $space-4;
+        gap: $space-8;
+    }
+}
+
+.page_header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $color-border;
+}
+
+.page_title {
+    font-size: $fs-4xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-tight;
+
+    @include mobile {
+        font-size: $fs-2xl;
+    }
+}
+
+.page_subtitle {
+    font-size: $fs-md;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+    max-width: 600px;
+}
+
+// ============================================================
+// GALLERY
+// ============================================================
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-4;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery_item {
+    display: block;
+    cursor: pointer;
+    background: none;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    padding: 0;
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: $shadow-lg;
+        border-color: $color-teal;
+    }
+}
+
+.gallery_img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform $transition-base;
+
+    .gallery_item:hover & {
+        transform: scale(1.03);
+    }
+}
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: $z-modal;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-10;
+
+    @include mobile {
+        padding: $space-4;
+    }
+}
+
+.lightbox_img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: $radius-md;
+    box-shadow: $shadow-xl;
+}
+
+.lightbox_close {
+    position: absolute;
+    top: $space-4;
+    right: $space-4;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background $transition-fast;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.lightbox_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background $transition-fast;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    &_prev {
+        left: $space-4;
+    }
+
+    &_next {
+        right: $space-4;
+    }
+
+    @include mobile {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.lightbox_counter {
+    position: absolute;
+    bottom: $space-4;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $fs-sm;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: $fw-medium;
+}

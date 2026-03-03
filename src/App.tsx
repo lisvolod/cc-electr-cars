@@ -13,6 +13,9 @@ import { MethodicalRecommendations } from './pages/methodical-recommendations'
 import { QualificationWorkDp } from './pages/qualification-work-dp'
 import { Practices } from './pages/practices'
 import { ScientificWork } from './pages/scientific-work'
+import { OurAchievements } from './pages/our-achievements'
+import { OurGraduates } from './pages/our-graduates'
+import { StudentLeisureTime } from './pages/student-leisure-time'
 
 import { Stub } from './pages/stub'
 
@@ -31,9 +34,10 @@ const STUB_ROUTES = [
   // { path: '/qualification-work-dp',                   title: 'Кваліфікаційна робота (ДП)' },
   // { path: '/practices',                               title: 'Практики' },
   // { path: '/scientific-work',                         title: 'Наукові роботи' },
-  { path: '/our-achievements',                        title: 'Наші досягнення' },
-  { path: '/student-leisure-time',                    title: 'Студентське дозвілля' },
+  // { path: '/our-achievements',                        title: 'Наші досягнення' },
+  // { path: '/student-leisure-time',                    title: 'Студентське дозвілля' },
   { path: '/contacts',                                title: 'Контакти' },
+  
 ]
 
 function App() {
@@ -48,12 +52,15 @@ function App() {
         <Route path="/material-and-technical-base-cc" element={<MaterialBase />} />
         <Route path="/specialty" element={<Specialty />} />
         <Route path="/our-stakeholders" element={<OurStakeholders />} />
+        <Route path="/our-graduates" element={<OurGraduates />} />
         <Route path="/educational-and-professional-programs" element={<EducationalAndProfessionalPrograms />} />
         <Route path="/subjects" element={<Subjects />} />
         <Route path="/methodical-recommendations" element={<MethodicalRecommendations />} />
         <Route path="/qualification-work-dp" element={<QualificationWorkDp />} />
         <Route path="/practices" element={<Practices />} />
         <Route path="/scientific-work" element={<ScientificWork />} />
+        <Route path="/our-achievements" element={<OurAchievements />} />
+        <Route path="/student-leisure-time" element={<StudentLeisureTime />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route
