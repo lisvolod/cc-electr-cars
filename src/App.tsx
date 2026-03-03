@@ -18,7 +18,7 @@ import { OurGraduates } from './pages/our-graduates'
 import { StudentLeisureTime } from './pages/student-leisure-time'
 import { Contacts } from './pages/contacts'
 
-import { Stub } from './pages/stub'
+// import { Stub } from './pages/stub'
 
 // Сторінки які ще не переписані — тимчасово показуємо заглушку
 // const STUB_ROUTES = [
