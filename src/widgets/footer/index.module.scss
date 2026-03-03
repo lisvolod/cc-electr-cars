@@ -1,0 +1,239 @@
+@use '../../styles/vars' as *;
+
+// ============================================================
+// FOOTER
+// ============================================================
+
+.footer {
+  background-color: $color-text-primary;
+  margin-top: auto;
+}
+
+.inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $space-12 $space-6 $space-6;
+
+  @include mobile {
+    padding: $space-10 $space-4 $space-4;
+  }
+}
+
+// ============================================================
+// TOP SECTION
+// ============================================================
+
+.top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: $space-10;
+
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: $space-8;
+  }
+}
+
+// ============================================================
+// BRAND
+// ============================================================
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+
+  @include tablet {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: $space-4;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.brand_logo {
+  flex-shrink: 0;
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-3 $space-4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.brand_logo_img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand_info {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.brand_name {
+  font-size: $fs-base;
+  font-weight: $fw-semibold;
+  color: $color-white;
+  line-height: $lh-snug;
+}
+
+.brand_college {
+  font-size: $fs-sm;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: $lh-normal;
+}
+
+// ============================================================
+// COLUMNS
+// ============================================================
+
+.col_title {
+  font-size: $fs-xs;
+  font-weight: $fw-semibold;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: $space-4;
+}
+
+// ============================================================
+// NAV COLUMN
+// ============================================================
+
+.nav_col {
+  // grid column
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-2;
+}
+
+.nav_link {
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color $transition-fast;
+  line-height: $lh-normal;
+
+  &:hover {
+    color: $color-teal;
+  }
+}
+
+// ============================================================
+// CONTACTS COLUMN
+// ============================================================
+
+.contacts_col {
+  // grid column
+}
+
+.contacts_list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  list-style: none;
+  padding: 0;
+}
+
+.contact_item {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-3;
+}
+
+.contact_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: $radius-sm;
+  background: rgba(255, 255, 255, 0.07);
+  color: $color-teal;
+  margin-top: 1px;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact_label {
+  font-size: $fs-xs;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: $fw-medium;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact_value {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-teal;
+  }
+}
+
+.external_icon {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+// ============================================================
+// DIVIDER
+// ============================================================
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: $space-8 0 $space-6;
+}
+
+// ============================================================
+// BOTTOM
+// ============================================================
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-4;
+  flex-wrap: wrap;
+}
+
+.copyright {
+  font-size: $fs-sm;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.specialty {
+  font-size: $fs-sm;
+  color: rgba(255, 255, 255, 0.25);
+
+  @include mobile {
+    display: none;
+  }
+}

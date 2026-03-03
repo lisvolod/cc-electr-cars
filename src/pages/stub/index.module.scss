@@ -1,0 +1,62 @@
+@use '../../styles/vars' as *;
+
+.page {
+  min-height: calc(100vh - $header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-10 $space-6;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-4;
+  text-align: center;
+  max-width: 400px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: $radius-xl;
+  background: $color-teal-light;
+  color: $color-teal-dark;
+  margin-bottom: $space-2;
+}
+
+.title {
+  font-size: $fs-2xl;
+  font-weight: $fw-bold;
+  color: $color-text-primary;
+}
+
+.description {
+  font-size: $fs-base;
+  color: $color-text-secondary;
+  line-height: $lh-relaxed;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  margin-top: $space-4;
+  padding: $space-3 $space-5;
+  border-radius: $radius-full;
+  background: $gradient-brand;
+  color: $color-white;
+  font-size: $fs-sm;
+  font-weight: $fw-semibold;
+  box-shadow: $shadow-teal;
+  transition: all $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(61, 191, 160, 0.40);
+  }
+}

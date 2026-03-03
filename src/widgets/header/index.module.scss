@@ -1,0 +1,353 @@
+@use '../../styles/vars' as *;
+
+// ============================================================
+// HEADER
+// ============================================================
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-sticky + 2;
+  height: $header-height;
+  overflow: visible;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+
+  transition:
+    border-color $transition-base,
+    box-shadow $transition-base;
+
+  &.scrolled {
+    border-bottom-color: $color-border;
+    box-shadow: $shadow-sm;
+  }
+}
+
+// Внутрішній контейнер
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-6;
+  gap: $space-6;
+}
+
+// ============================================================
+// LOGO
+// ============================================================
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo_img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+
+//   @include tablet {
+//     height: 36px;
+//   }
+
+//   @include mobile {
+//     height: 30px;
+//   }
+}
+
+// ============================================================
+// DESKTOP NAV
+// ============================================================
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $space-1;
+  flex: 1;
+  justify-content: flex-end;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav_link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  padding: $space-2 $space-3;
+  border-radius: $radius-sm;
+
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-text-secondary;
+  white-space: nowrap;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: $font-primary;
+
+  transition:
+    color $transition-fast,
+    background-color $transition-fast;
+
+  &:hover {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+  }
+
+  &.active {
+    color: $color-teal-dark;
+    font-weight: $fw-semibold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: $space-3;
+      right: $space-3;
+      height: 2px;
+      background: $gradient-brand;
+      border-radius: $radius-full;
+    }
+  }
+}
+
+// ============================================================
+// DROPDOWN
+// ============================================================
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown_trigger {
+  // Стилі успадковані від .nav_link
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform $transition-base;
+  color: $color-text-muted;
+
+  .nav_link:hover & {
+    color: $color-teal-dark;
+  }
+}
+
+.chevron_open {
+  transform: rotate(-180deg);
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: calc(100% + $space-2);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  min-width: 220px;
+  z-index: $z-dropdown;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition:
+    opacity $transition-base,
+    transform $transition-base,
+    visibility $transition-base;
+
+  &_open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown_menu_inner {
+  background: $color-bg-card;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-lg;
+  padding: $space-2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  // Стрілка вгорі
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: $color-bg-card;
+    border-left: 1px solid $color-border;
+    border-top: 1px solid $color-border;
+  }
+}
+
+.dropdown_item {
+  display: block;
+  padding: $space-2 $space-3;
+  border-radius: $radius-sm;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-text-secondary;
+  white-space: nowrap;
+
+  transition:
+    color $transition-fast,
+    background-color $transition-fast;
+
+  &:hover {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+  }
+
+  &.active {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+    font-weight: $fw-semibold;
+  }
+}
+
+// ============================================================
+// BURGER
+// ============================================================
+
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-md;
+  color: $color-text-primary;
+  flex-shrink: 0;
+  transition:
+    background-color $transition-fast,
+    color $transition-fast;
+
+  &:hover {
+    background-color: $color-teal-light;
+    color: $color-teal-dark;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+// ============================================================
+// MOBILE MENU
+// ============================================================
+
+.mobile_menu {
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $z-sticky + 1;
+  background: #ffffff;
+  overflow-y: auto;
+
+  @media (min-width: #{$bp-tablet + 1px}) {
+    display: none;
+  }
+}
+
+.mobile_nav {
+  display: flex;
+  flex-direction: column;
+  padding: $space-4 $space-4 $space-8;
+  gap: 2px;
+}
+
+.mobile_link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  font-size: $fs-base;
+  font-weight: $fw-medium;
+  color: $color-text-secondary;
+  background: none;
+  border: none;
+  font-family: $font-primary;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    color $transition-fast,
+    background-color $transition-fast;
+
+  &:hover {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+  }
+
+  &.active {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+    font-weight: $fw-semibold;
+  }
+}
+
+.mobile_dropdown_trigger {
+  // успадковано від .mobile_link
+}
+
+.mobile_submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 0;
+  overflow: hidden;
+  padding-left: $space-4;
+
+  transition: max-height $transition-slow;
+
+  &_open {
+    max-height: 400px;
+  }
+}
+
+.mobile_sublink {
+  display: block;
+  padding: $space-2 $space-4;
+  border-radius: $radius-md;
+  font-size: $fs-sm;
+  font-weight: $fw-medium;
+  color: $color-text-muted;
+
+  transition:
+    color $transition-fast,
+    background-color $transition-fast;
+
+  &:hover {
+    color: $color-teal-dark;
+    background-color: $color-teal-light;
+  }
+
+  &.active {
+    color: $color-teal-dark;
+    font-weight: $fw-semibold;
+  }
+}

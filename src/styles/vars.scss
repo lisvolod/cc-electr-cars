@@ -1,0 +1,205 @@
+// ============================================================
+// DESIGN SYSTEM — ЦК Електричних та електронних систем авто
+// ============================================================
+
+// ------------------------------------------------------------
+// BRAND COLORS (з логотипу)
+// ------------------------------------------------------------
+$color-teal:        #3DBFA0;   // бірюза — електронні схеми (верх лого)
+$color-teal-dark:   #2A9E82;   // темніша бірюза — hover, акценти
+$color-teal-light:  #E8F8F4;   // дуже світла бірюза — фони секцій
+
+$color-blue:        #4AADCC;   // синій — кабель (низ лого)
+$color-blue-dark:   #3490AE;   // темніший синій — hover
+$color-blue-light:  #E6F5FA;   // світло-синій — фони
+
+// ------------------------------------------------------------
+// GRADIENTS
+// ------------------------------------------------------------
+$gradient-brand:    linear-gradient(135deg, $color-teal 0%, $color-blue 100%);
+$gradient-brand-r:  linear-gradient(135deg, $color-blue 0%, $color-teal 100%);
+$gradient-subtle:   linear-gradient(135deg, $color-teal-light 0%, $color-blue-light 100%);
+
+// ------------------------------------------------------------
+// NEUTRALS
+// ------------------------------------------------------------
+$color-text-primary:   #3D4E5C;   // темно-сірий з лого (для заголовків)
+$color-text-secondary: #637282;   // середній сірий (для підписів)
+$color-text-muted:     #96A5B3;   // світлий сірий (для placeholder)
+$color-text-on-dark:   #FFFFFF;   // білий текст на темному фоні
+
+$color-bg-page:        #F0F4F7;   // фон сторінки (ніжний нейтральний)
+$color-bg-card:        #FFFFFF;   // фон карток
+$color-bg-section:     #F7FAFB;   // фон альтернативних секцій
+
+$color-border:         #DDE5EC;   // бордери
+$color-border-light:   #EEF3F7;   // дуже світлий бордер
+
+$color-white:          #FFFFFF;
+$color-black:          #1A2530;
+
+// ------------------------------------------------------------
+// TYPOGRAPHY
+// ------------------------------------------------------------
+$font-primary:    'Inter', 'Rubik', sans-serif;
+$font-heading:    'Inter', 'Rubik', sans-serif;
+
+// Font sizes (base 16px)
+$fs-xs:   12px;
+$fs-sm:   14px;
+$fs-base: 16px;
+$fs-md:   18px;
+$fs-lg:   20px;
+$fs-xl:   24px;
+$fs-2xl:  28px;
+$fs-3xl:  32px;
+$fs-4xl:  40px;
+$fs-5xl:  48px;
+
+// Font weights
+$fw-regular:  400;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+$fw-extrabold:800;
+
+// Line heights
+$lh-tight:  1.2;
+$lh-snug:   1.35;
+$lh-normal: 1.5;
+$lh-relaxed:1.65;
+
+// ------------------------------------------------------------
+// SPACING
+// ------------------------------------------------------------
+$space-1:   4px;
+$space-2:   8px;
+$space-3:   12px;
+$space-4:   16px;
+$space-5:   20px;
+$space-6:   24px;
+$space-8:   32px;
+$space-10:  40px;
+$space-12:  48px;
+$space-16:  64px;
+$space-20:  80px;
+$space-24:  96px;
+
+// ------------------------------------------------------------
+// BORDER RADIUS
+// ------------------------------------------------------------
+$radius-sm:   6px;
+$radius-md:   12px;
+$radius-lg:   16px;
+$radius-xl:   24px;
+$radius-2xl:  32px;
+$radius-full: 9999px;
+
+// ------------------------------------------------------------
+// SHADOWS
+// ------------------------------------------------------------
+$shadow-xs:  0px 1px 3px rgba(61, 78, 92, 0.06);
+$shadow-sm:  0px 2px 8px rgba(61, 78, 92, 0.08);
+$shadow-md:  0px 4px 16px rgba(61, 78, 92, 0.10);
+$shadow-lg:  0px 8px 30px rgba(61, 78, 92, 0.12);
+$shadow-xl:  0px 16px 48px rgba(61, 78, 92, 0.14);
+
+// Кольорові тіні (для кнопок і accent елементів)
+$shadow-teal: 0px 4px 16px rgba(61, 191, 160, 0.30);
+$shadow-blue: 0px 4px 16px rgba(74, 173, 204, 0.30);
+
+// ------------------------------------------------------------
+// TRANSITIONS
+// ------------------------------------------------------------
+$transition-fast:   0.15s ease;
+$transition-base:   0.25s ease;
+$transition-slow:   0.4s ease;
+$transition-spring: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// ------------------------------------------------------------
+// BREAKPOINTS
+// ------------------------------------------------------------
+$bp-mobile-s:  430px;
+$bp-mobile:    768px;
+$bp-tablet:    1024px;
+$bp-desktop:   1280px;
+$bp-desktop-l: 1600px;
+$bp-desktop-xl:1920px;
+
+// ------------------------------------------------------------
+// LAYOUT
+// ------------------------------------------------------------
+$max-width:       1280px;
+$header-height:   68px;
+$header-height-m: 56px;
+
+// ------------------------------------------------------------
+// Z-INDEX
+// ------------------------------------------------------------
+$z-dropdown:  100;
+$z-sticky:    200;
+$z-overlay:   300;
+$z-modal:     400;
+$z-toast:     500;
+
+// ------------------------------------------------------------
+// MIXINS
+// ------------------------------------------------------------
+
+// Медіа-запити
+@mixin mobile-s {
+  @media (max-width: #{$bp-mobile-s}) { @content; }
+}
+@mixin mobile {
+  @media (max-width: #{$bp-mobile}) { @content; }
+}
+@mixin tablet {
+  @media (max-width: #{$bp-tablet}) { @content; }
+}
+@mixin desktop {
+  @media (max-width: #{$bp-desktop}) { @content; }
+}
+
+// Flex helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Обрізати текст
+@mixin text-clamp($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+// Скляний ефект (glassmorphism)
+@mixin glass($opacity: 0.85) {
+  background: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+// Градієнтний текст
+@mixin gradient-text {
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// Hover підйом картки
+@mixin card-hover {
+  transition: transform $transition-base, box-shadow $transition-base;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-lg;
+  }
+}
