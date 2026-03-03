@@ -8,6 +8,10 @@ import { MaterialBase } from './pages/material-and-technical-base-cc'
 import { Specialty } from './pages/specialty'
 import { OurStakeholders } from './pages/our-stakeholders'
 import { EducationalAndProfessionalPrograms } from './pages/educational-and-professional-programs'
+import { Subjects } from './pages/subjects'
+import { MethodicalRecommendations } from './pages/methodical-recommendations'
+import { QualificationWorkDp } from './pages/qualification-work-dp'
+import { Practices } from './pages/practices'
 
 import { Stub } from './pages/stub'
 
@@ -20,11 +24,11 @@ const STUB_ROUTES = [
   // { path: '/specialty',                               title: 'Спеціальність' },
   // { path: '/our-stakeholders',                        title: 'Наші стейкхолдери' },
   // { path: '/our-graduates',                           title: 'Наші випускники' },
-  { path: '/educational-and-professional-programs',   title: 'Освітньо-професійні програми' },
-  { path: '/syllabuses',                              title: 'Дисципліни (силабуси)' },
-  { path: '/methodological-recommendations-for-KP',   title: 'Методичні рекомендації до КР' },
-  { path: '/qualification-work-dp',                   title: 'Кваліфікаційна робота (ДП)' },
-  { path: '/practices',                               title: 'Практики' },
+  // { path: '/educational-and-professional-programs',   title: 'Освітньо-професійні програми' },
+  // { path: '/syllabuses',                              title: 'Дисципліни (силабуси)' },
+  // { path: '/methodological-recommendations-for-KP',   title: 'Методичні рекомендації до КР' },
+  // { path: '/qualification-work-dp',                   title: 'Кваліфікаційна робота (ДП)' },
+  // { path: '/practices',                               title: 'Практики' },
   { path: '/scientific-work',                         title: 'Наукові роботи' },
   { path: '/our-achievements',                        title: 'Наші досягнення' },
   { path: '/student-leisure-time',                    title: 'Студентське дозвілля' },
@@ -44,6 +48,10 @@ function App() {
         <Route path="/specialty" element={<Specialty />} />
         <Route path="/our-stakeholders" element={<OurStakeholders />} />
         <Route path="/educational-and-professional-programs" element={<EducationalAndProfessionalPrograms />} />
+        <Route path="/subjects" element={<Subjects />} />
+        <Route path="/methodical-recommendations" element={<MethodicalRecommendations />} />
+        <Route path="/qualification-work-dp" element={<QualificationWorkDp />} />
+        <Route path="/practices" element={<Practices />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route

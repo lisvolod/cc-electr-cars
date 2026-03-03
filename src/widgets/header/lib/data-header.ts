@@ -30,8 +30,8 @@ export const dataHeader: INavItem[] = [
         title: 'Студенту',
         items: [
             { title: 'Освітньо-професійні програми', path: '/educational-and-professional-programs' },
-            { title: 'Дисципліни (силабуси)', path: '/syllabuses' },
-            { title: 'Методичні рекомендації до КР', path: '/methodological-recommendations-for-KP' },
+            { title: 'Дисципліни (силабуси)', path: '/subjects' },
+            { title: 'Методичні рекомендації до КР', path: '/methodical-recommendations' },
             { title: 'Кваліфікаційна робота (ДП)', path: '/qualification-work-dp' },
             { title: 'Практики', path: '/practices' },
         ],
