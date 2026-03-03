@@ -65,7 +65,7 @@ import img_310_07 from '@/assets/material-base/310/07.jpg'
 import img_310_08 from '@/assets/material-base/310/08.jpg'
 import img_310_09 from '@/assets/material-base/310/09.jpg'
 import img_310_10 from '@/assets/material-base/310/10.jpg'
-import img_310_11 from '@/assets/material-base/310/11.jpg'
+import img_310_13 from '@/assets/material-base/310/13.jpg'
 // import img_310_12 from '@/assets/material-base/310/12.jpg'
 
 export interface ICabinet {
@@ -161,7 +161,7 @@ export const dataContent: ICabinet[] = [
       { src: img_310_08 },
       { src: img_310_09 },
       { src: img_310_10 },
-      { src: img_310_11 },
+      { src: img_310_13 },
     //   { src: img_310_12 },
     ]
   },
