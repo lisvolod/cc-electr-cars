@@ -66,7 +66,7 @@ import img_310_08 from '@/assets/material-base/310/08.jpg'
 import img_310_09 from '@/assets/material-base/310/09.jpg'
 import img_310_10 from '@/assets/material-base/310/10.jpg'
 import img_310_11 from '@/assets/material-base/310/11.jpg'
-import img_310_12 from '@/assets/material-base/310/12.jpg'
+// import img_310_12 from '@/assets/material-base/310/12.jpg'
 
 export interface ICabinet {
   title: string
