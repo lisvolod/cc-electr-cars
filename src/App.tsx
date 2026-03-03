@@ -4,6 +4,7 @@ import { Home } from './pages/home'
 import { CompositionCC } from './pages/composition-cc'
 import { HistoryCC } from './pages/history-cc'
 import { CertificationTraining } from './pages/certification-training'
+import { MaterialBase } from './pages/material-and-technical-base-cc'
 
 import { Stub } from './pages/stub'
 
@@ -12,7 +13,7 @@ const STUB_ROUTES = [
   // { path: '/history-cc',                              title: 'Історія ЦК' },
   // { path: '/composition-cc',                          title: 'Склад ЦК' },
   // { path: '/certification-training',                  title: 'Підвищення кваліфікації' },
-  { path: '/material-and-technical-base-cc',          title: 'Матеріально-технічна база' },
+  // { path: '/material-and-technical-base-cc',          title: 'Матеріально-технічна база' },
   { path: '/specialty',                               title: 'Спеціальність' },
   { path: '/our-stakeholders',                        title: 'Наші стейкхолдери' },
   { path: '/our-graduates',                           title: 'Наші випускники' },
@@ -36,6 +37,7 @@ function App() {
         <Route path="/composition-cc" element={<CompositionCC />} />
         <Route path="/history-cc" element={<HistoryCC />} />
         <Route path="/certification-training" element={<CertificationTraining />} />
+        <Route path="/material-and-technical-base-cc" element={<MaterialBase />} />
 
         {STUB_ROUTES.map(({ path, title }) => (
           <Route

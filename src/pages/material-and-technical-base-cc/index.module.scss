@@ -1,0 +1,310 @@
+@use '../../styles/vars' as *;
+
+.page {
+    padding: $space-10 0 $space-16;
+
+    @include mobile {
+        padding: $space-6 0 $space-10;
+    }
+}
+
+.container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-10;
+
+    @include mobile {
+        padding: 0 $space-4;
+    }
+}
+
+.page_header {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+    padding-bottom: $space-8;
+    border-bottom: 1px solid $color-border;
+}
+
+.page_title {
+    font-size: $fs-4xl;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+    line-height: $lh-tight;
+
+    @include mobile {
+        font-size: $fs-2xl;
+    }
+}
+
+.page_subtitle {
+    font-size: $fs-md;
+    color: $color-text-secondary;
+    line-height: $lh-relaxed;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+}
+
+// ============================================================
+// ACCORDION
+// ============================================================
+
+.cabinet {
+    background: $color-bg-card;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-xs;
+}
+
+.cabinet_toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: $space-5 $space-6;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: $font-primary;
+    text-align: left;
+    gap: $space-4;
+    transition: background-color $transition-fast;
+
+    &:hover {
+        background: $color-teal-light;
+    }
+
+    &_open {
+        background: $color-teal-light;
+        border-bottom: 1px solid $color-border-light;
+    }
+}
+
+.cabinet_toggle_left {
+    display: flex;
+    flex-direction: column;
+    gap: $space-1;
+}
+
+.cabinet_title {
+    font-size: $fs-lg;
+    font-weight: $fw-bold;
+    color: $color-text-primary;
+}
+
+.cabinet_subtitle {
+    font-size: $fs-sm;
+    color: $color-text-secondary;
+    font-weight: $fw-medium;
+}
+
+.cabinet_toggle_right {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    flex-shrink: 0;
+}
+
+.cabinet_count {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-1;
+    font-size: $fs-xs;
+    font-weight: $fw-medium;
+    color: $color-text-muted;
+    background: $color-bg-section;
+    padding: 2px $space-3;
+    border-radius: $radius-full;
+    white-space: nowrap;
+
+    .cabinet_toggle_open & {
+        background: rgba(61, 191, 160, 0.15);
+        color: $color-teal-dark;
+    }
+}
+
+.toggle_chevron {
+    color: $color-text-muted;
+    transition: transform $transition-base;
+    flex-shrink: 0;
+
+    &_open {
+        transform: rotate(-180deg);
+    }
+}
+
+.cabinet_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+
+    &_open {
+        max-height: 9999px;
+    }
+}
+
+// ============================================================
+// GALLERY
+// ============================================================
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-3;
+    padding: $space-5;
+
+    @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gallery_item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-md;
+    overflow: hidden;
+    padding: 0;
+    transition: all $transition-base;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: $shadow-md;
+        border-color: $color-teal;
+    }
+}
+
+.gallery_img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery_caption {
+    font-size: $fs-xs;
+    color: $color-text-secondary;
+    padding: $space-2 $space-3;
+    line-height: $lh-snug;
+    background: $color-bg-section;
+    border-top: 1px solid $color-border-light;
+    text-align: left;
+}
+
+// ============================================================
+// LIGHTBOX
+// ============================================================
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: $z-modal;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-10;
+
+    @include mobile {
+        padding: $space-4;
+    }
+}
+
+.lightbox_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-4;
+    max-width: 90vw;
+}
+
+.lightbox_img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: $radius-md;
+    box-shadow: $shadow-xl;
+}
+
+.lightbox_caption {
+    font-size: $fs-sm;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    max-width: 600px;
+    line-height: $lh-relaxed;
+}
+
+.lightbox_close {
+    position: absolute;
+    top: $space-4;
+    right: $space-4;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background $transition-fast;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.lightbox_nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background $transition-fast;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    &_prev {
+        left: $space-4;
+    }
+
+    &_next {
+        right: $space-4;
+    }
+
+    @include mobile {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.lightbox_counter {
+    position: absolute;
+    bottom: $space-4;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $fs-sm;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: $fw-medium;
+}
