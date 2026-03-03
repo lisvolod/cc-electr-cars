@@ -67,13 +67,13 @@ const PROSPECTS_CARDS = [
 ]
 
 // Швидкі посилання
-const QUICK_LINKS = [
-  { title: 'Про спеціальність',   path: '/specialty' },
-  { title: 'Склад ЦК',            path: '/composition-cc' },
-  { title: 'Силабуси',            path: '/syllabuses' },
-  { title: 'Наші досягнення',     path: '/our-achievements' },
-  { title: 'Контакти',            path: '/contacts' },
-]
+// const QUICK_LINKS = [
+//   { title: 'Про спеціальність',   path: '/specialty' },
+//   { title: 'Склад ЦК',            path: '/composition-cc' },
+//   { title: 'Силабуси',            path: '/syllabuses' },
+//   { title: 'Наші досягнення',     path: '/our-achievements' },
+//   { title: 'Контакти',            path: '/contacts' },
+// ]
 
 export const Home = () => {
   return (
