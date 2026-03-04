@@ -24,22 +24,14 @@ import img_217_8 from '@/assets/material-base/217/8.png'
 import img_217_9 from '@/assets/material-base/217/9.png'
 import img_217_10 from '@/assets/material-base/217/10.png'
 // 308
-import img_308_1 from '@/assets/material-base/308/01.png'
-import img_308_2 from '@/assets/material-base/308/02.png'
-import img_308_3 from '@/assets/material-base/308/03.png'
+
 import img_308_4 from '@/assets/material-base/308/04.png'
-import img_308_5 from '@/assets/material-base/308/05.png'
-import img_308_6 from '@/assets/material-base/308/06.png'
 import img_308_7 from '@/assets/material-base/308/07.png'
 import img_308_8 from '@/assets/material-base/308/08.png'
-// import img_308_9 from '@/assets/material-base/308/09.png'
-import img_308_10 from '@/assets/material-base/308/10.png'
-import img_308_11 from '@/assets/material-base/308/11.png'
 import img_308_12 from '@/assets/material-base/308/12.png'
 import img_308_13 from '@/assets/material-base/308/13.png'
 import img_308_14 from '@/assets/material-base/308/14.png'
 import img_308_15 from '@/assets/material-base/308/15.png'
-import img_308_16 from '@/assets/material-base/308/16.png'
 import img_308_17 from '@/assets/material-base/308/17.png'
 import img_308_18 from '@/assets/material-base/308/18.png'
 import img_308_19 from '@/assets/material-base/308/19.png'
@@ -66,7 +58,6 @@ import img_310_08 from '@/assets/material-base/310/08.jpg'
 import img_310_09 from '@/assets/material-base/310/09.jpg'
 import img_310_10 from '@/assets/material-base/310/10.jpg'
 import img_310_13 from '@/assets/material-base/310/13.jpg'
-// import img_310_12 from '@/assets/material-base/310/12.jpg'
 
 export interface ICabinet {
   title: string
@@ -103,13 +94,8 @@ export const dataContent: ICabinet[] = [
     title: 'Кабінет 308',
     subtitle: 'Електронних та мікропроцесорних систем автотранспортних засобів. Мехатронних систем автомобілів',
     images: [
-      { src: img_308_1 },
-      { src: img_308_2 },
-      { src: img_308_3 },
+
       { src: img_308_4 },
-      { src: img_308_5 },
-      { src: img_308_6 },
-      { src: img_308_10 },
       { src: img_308_25 },
       { src: img_308_26 },
       { src: img_308_27 },
@@ -117,26 +103,12 @@ export const dataContent: ICabinet[] = [
       { src: img_308_29 },
       { src: img_308_30 },
       { src: img_308_31 },
-    //   { src: img_308_32 },
-    //   { src: img_308_33 },
-    //   { src: img_308_34 },
-    //   { src: img_308_35 },
-    //   { src: img_308_36 },
-    //   { src: img_308_37 },
-    //   { src: img_308_38 },
-    //   { src: img_308_39 },
-    //   { src: img_308_40 },
-    //   { src: img_308_41 },
-    //   { src: img_308_42 },
       { src: img_308_7,  caption: 'Стенд для дослідження робочих параметрів і характеристик автомобільного парктроніка' },
       { src: img_308_8,  caption: 'Стенд для дослідження робочих параметрів і характеристик автомобільного сидіння з підігрівом' },
-    //   { src: img_308_9 },
-      { src: img_308_11, caption: 'Стенд для дослідження робочих параметрів і характеристик склопідіймача та центрального замка' },
       { src: img_308_12, caption: 'Стенд для дослідження робочих параметрів і характеристик автомобільної панелі приладів та органів комутації' },
       { src: img_308_13, caption: 'Стенд для дослідження параметрів та характеристик акустичної системи автомобіля' },
       { src: img_308_14, caption: 'Стенд для дослідження параметрів та характеристик системи активної та пасивної безпеки' },
       { src: img_308_15, caption: 'Стенд для дослідження параметрів та характеристик регуляторів напруги автомобільних генераторів' },
-      { src: img_308_16, caption: 'Лабораторне місце для дослідження параметрів давачів автомобільних та кабельної в\'язки' },
       { src: img_308_17, caption: 'Лабораторне місце для дослідження параметрів та характеристик електронних блоків керування' },
       { src: img_308_18, caption: 'Лабораторне місце для дослідження параметрів та характеристик виконавчих пристроїв автомобільних систем' },
       { src: img_308_19, caption: 'Лабораторне місце для дослідження параметрів та характеристик обладнання автомобільних систем' },
@@ -162,7 +134,6 @@ export const dataContent: ICabinet[] = [
       { src: img_310_09 },
       { src: img_310_10 },
       { src: img_310_13 },
-    //   { src: img_310_12 },
     ]
   },
   {

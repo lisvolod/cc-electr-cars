@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 
 const ITEMS = [
   {
-    title: 'Дипломне проектування',
+    title: 'Кваліфікаційна робота',
     url: 'https://eguru1.tk.te.ua/course/view.php?id=999',
   },
 ]
@@ -16,9 +16,9 @@ export const QualificationWorkDp = () => {
         <div className={styles.container}>
 
           <div className={styles.page_header}>
-            <h1 className={styles.page_title}>Виконання кваліфікаційної роботи у вигляді дипломного проекту</h1>
+            <h1 className={styles.page_title}>Виконання кваліфікаційної роботи</h1>
             <p className={styles.page_subtitle}>
-              Матеріали для виконання дипломного проекту на платформі eGuru
+              Матеріали для виконання кваліфікаційної роботи на платформі eGuru
             </p>
           </div>
 

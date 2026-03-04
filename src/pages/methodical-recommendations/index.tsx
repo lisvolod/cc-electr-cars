@@ -20,9 +20,9 @@ export const MethodicalRecommendations = () => {
         <div className={styles.container}>
 
           <div className={styles.page_header}>
-            <h1 className={styles.page_title}>Методичні рекомендації до КР</h1>
+            <h1 className={styles.page_title}>Методичні рекомендації до КП</h1>
             <p className={styles.page_subtitle}>
-              Методичні рекомендації до курсових робіт на платформі eGuru
+              Методичні рекомендації до курсових проектів на платформі eGuru
             </p>
           </div>
 

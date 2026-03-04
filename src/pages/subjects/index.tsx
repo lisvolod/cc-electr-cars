@@ -16,7 +16,7 @@ const GROUPS: IGroup[] = [
   {
     title: 'Профільні дисципліни',
     subjects: [
-      { title: 'Вступ до спеціальності', url: 'https://eguru1.tk.te.ua/course/view.php?id=604' },
+      // { title: 'Вступ до спеціальності', url: 'https://eguru1.tk.te.ua/course/view.php?id=604' },
       { title: 'Електроматеріалознавство', url: 'https://eguru1.tk.te.ua/course/view.php?id=607' },
       { title: 'Теоретичні основи електротехніки', url: 'https://eguru1.tk.te.ua/course/view.php?id=839' },
       { title: 'Основи електроніки та мікроелектроніки', url: 'https://eguru1.tk.te.ua/course/view.php?id=569' },

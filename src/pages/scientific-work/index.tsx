@@ -45,6 +45,7 @@ const DATA: IScientist[] = [
         ],
         profiles: [
             { label: 'Google Scholar', url: 'https://scholar.google.com/citations?user=hVryWv4AAAAJ&hl=uk' },
+            { label: 'Бібліотека ТНТУ', url: 'https://library.tntu.edu.ua/personaliji/a/z/zaveruha-ruslan-romanovych/' },
         ],
     },
     {

@@ -4,6 +4,112 @@ import { ChevronDown, ChevronLeft, ChevronRight, X, Images } from 'lucide-react'
 import { MainLayout } from '../../layouts/main'
 import styles from './index.module.scss'
 
+// Філармонія 13.03.2025'
+import img_fil_1_1 from '@/assets/studentLeisure/filarm/01.jpg'
+import img_fil_1_2 from '@/assets/studentLeisure/filarm/02.jpg'
+import img_fil_1_3 from '@/assets/studentLeisure/filarm/03.jpg'
+//Конкурс Electude Київ 2025 
+import img_kyv_1_1 from '@/assets/studentLeisure/kyv/01.jpg'
+import img_kyv_1_2 from '@/assets/studentLeisure/kyv/02.jpg'
+import img_kyv_1_3 from '@/assets/studentLeisure/kyv/03.jpg'
+import img_kyv_1_4 from '@/assets/studentLeisure/kyv/04.jpg'
+import img_kyv_1_5 from '@/assets/studentLeisure/kyv/05.jpg'
+import img_kyv_1_6 from '@/assets/studentLeisure/kyv/06.jpg'
+import img_kyv_1_7 from '@/assets/studentLeisure/kyv/07.jpg'
+import img_kyv_1_8 from '@/assets/studentLeisure/kyv/08.jpg'
+import img_kyv_1_9 from '@/assets/studentLeisure/kyv/09.jpg'
+import img_kyv_1_10 from '@/assets/studentLeisure/kyv/10.jpg'
+import img_kyv_1_11 from '@/assets/studentLeisure/kyv/11.jpg'
+import img_kyv_1_12 from '@/assets/studentLeisure/kyv/12.jpg'
+import img_kyv_1_13 from '@/assets/studentLeisure/kyv/13.jpg'
+import img_kyv_1_14 from '@/assets/studentLeisure/kyv/14.jpg'
+import img_kyv_1_15 from '@/assets/studentLeisure/kyv/15.jpg'
+import img_kyv_1_16 from '@/assets/studentLeisure/kyv/16.jpg'
+import img_kyv_1_17 from '@/assets/studentLeisure/kyv/17.jpg'
+import img_kyv_1_18 from '@/assets/studentLeisure/kyv/18.jpg'
+import img_kyv_1_19 from '@/assets/studentLeisure/kyv/19.jpg'
+import img_kyv_1_20 from '@/assets/studentLeisure/kyv/20.jpg'
+import img_kyv_1_21 from '@/assets/studentLeisure/kyv/21.jpg'
+import img_kyv_1_22 from '@/assets/studentLeisure/kyv/22.jpg'
+import img_kyv_1_23 from '@/assets/studentLeisure/kyv/23.jpg'
+import img_kyv_1_24 from '@/assets/studentLeisure/kyv/24.jpg'
+import img_kyv_1_25 from '@/assets/studentLeisure/kyv/25.jpg'
+//Конкурс 29.10.2024
+import img_conc_2_1 from '@/assets/studentLeisure/conc2/01.jpg'
+import img_conc_2_2 from '@/assets/studentLeisure/conc2/02.jpg'
+import img_conc_2_3 from '@/assets/studentLeisure/conc2/03.jpg'
+import img_conc_2_4 from '@/assets/studentLeisure/conc2/04.jpg'
+import img_conc_2_5 from '@/assets/studentLeisure/conc2/05.jpg'
+import img_conc_2_6 from '@/assets/studentLeisure/conc2/06.jpg'
+import img_conc_2_7 from '@/assets/studentLeisure/conc2/07.jpg'
+import img_conc_2_8 from '@/assets/studentLeisure/conc2/08.jpg'
+import img_conc_2_9 from '@/assets/studentLeisure/conc2/09.jpg'
+import img_conc_2_10 from '@/assets/studentLeisure/conc2/10.jpg'
+import img_conc_2_11 from '@/assets/studentLeisure/conc2/11.jpg'
+//Конкурс 28.10.25
+import img_conc_1_1 from '@/assets/studentLeisure/conc1/01.jpg'
+import img_conc_1_2 from '@/assets/studentLeisure/conc1/02.jpg'
+import img_conc_1_3 from '@/assets/studentLeisure/conc1/03.jpg'
+import img_conc_1_4 from '@/assets/studentLeisure/conc1/04.jpg'
+import img_conc_1_5 from '@/assets/studentLeisure/conc1/05.jpg'
+import img_conc_1_6 from '@/assets/studentLeisure/conc1/06.jpg'
+import img_conc_1_7 from '@/assets/studentLeisure/conc1/07.jpg'
+import img_conc_1_8 from '@/assets/studentLeisure/conc1/08.jpg'
+import img_conc_1_9 from '@/assets/studentLeisure/conc1/09.jpg'
+import img_conc_1_10 from '@/assets/studentLeisure/conc1/10.jpg'
+import img_conc_1_11 from '@/assets/studentLeisure/conc1/11.jpg'
+//Технологія
+import img_tech_1_1 from '@/assets/studentLeisure/technologia/01.jpg'
+import img_tech_1_4 from '@/assets/studentLeisure/technologia/04.jpg'
+import img_tech_1_5 from '@/assets/studentLeisure/technologia/05.jpg'
+import img_tech_1_6 from '@/assets/studentLeisure/technologia/06.jpg'
+import img_tech_1_7 from '@/assets/studentLeisure/technologia/07.jpg'
+import img_tech_1_8 from '@/assets/studentLeisure/technologia/08.jpg'
+import img_tech_1_9 from '@/assets/studentLeisure/technologia/09.jpg'
+import img_tech_1_10 from '@/assets/studentLeisure/technologia/10.jpg'
+import img_tech_1_11 from '@/assets/studentLeisure/technologia/11.jpg'
+import img_tech_1_12 from '@/assets/studentLeisure/technologia/12.jpg'
+import img_tech_1_13 from '@/assets/studentLeisure/technologia/13.jpg'
+import img_tech_1_14 from '@/assets/studentLeisure/technologia/14.jpg'
+import img_tech_1_15 from '@/assets/studentLeisure/technologia/15.jpg'
+import img_tech_1_16 from '@/assets/studentLeisure/technologia/16.jpg'
+import img_tech_1_17 from '@/assets/studentLeisure/technologia/17.jpg'
+
+//ГБЦ
+import img_gbc_1_1 from '@/assets/studentLeisure/GBC/01.jpg'
+import img_gbc_1_2 from '@/assets/studentLeisure/GBC/02.jpg'
+import img_gbc_1_3 from '@/assets/studentLeisure/GBC/03.jpg'
+import img_gbc_1_4 from '@/assets/studentLeisure/GBC/04.jpg'
+import img_gbc_1_5 from '@/assets/studentLeisure/GBC/05.jpg'
+import img_gbc_1_6 from '@/assets/studentLeisure/GBC/06.jpg'
+import img_gbc_1_7 from '@/assets/studentLeisure/GBC/07.jpg'
+import img_gbc_1_8 from '@/assets/studentLeisure/GBC/08.jpg'
+//TIR
+import img_tir_1_1 from '@/assets/studentLeisure/TIR/01.jpg'
+import img_tir_1_2 from '@/assets/studentLeisure/TIR/02.jpg'
+import img_tir_1_3 from '@/assets/studentLeisure/TIR/03.jpg'
+import img_tir_1_4 from '@/assets/studentLeisure/TIR/04.jpg'
+import img_tir_1_5 from '@/assets/studentLeisure/TIR/05.jpg'
+import img_tir_1_6 from '@/assets/studentLeisure/TIR/06.jpg'
+import img_tir_1_7 from '@/assets/studentLeisure/TIR/07.jpg'
+//Bortnece
+import img_brt_1_1 from '@/assets/studentLeisure/bortnece/01.jpg'
+import img_brt_1_2 from '@/assets/studentLeisure/bortnece/02.jpg'
+import img_brt_1_3 from '@/assets/studentLeisure/bortnece/03.jpg'
+import img_brt_1_4 from '@/assets/studentLeisure/bortnece/04.jpg'
+import img_brt_1_5 from '@/assets/studentLeisure/bortnece/05.jpg'
+//Toyota
+import img_tyt_1_1 from '@/assets/studentLeisure/toyota/01.jpg'
+import img_tyt_1_2 from '@/assets/studentLeisure/toyota/02.jpg'
+import img_tyt_1_3 from '@/assets/studentLeisure/toyota/03.jpg'
+import img_tyt_1_4 from '@/assets/studentLeisure/toyota/04.jpg'
+import img_tyt_1_5 from '@/assets/studentLeisure/toyota/05.jpg'
+import img_tyt_1_6 from '@/assets/studentLeisure/toyota/06.jpg'
+import img_tyt_1_7 from '@/assets/studentLeisure/toyota/07.jpg'
+import img_tyt_1_8 from '@/assets/studentLeisure/toyota/08.jpg'
+import img_tyt_1_9 from '@/assets/studentLeisure/toyota/09.jpg'
+import img_tyt_1_10 from '@/assets/studentLeisure/toyota/10.jpg'
+import img_tyt_1_11 from '@/assets/studentLeisure/toyota/11.jpg'
 // SMJ
 import img_smj_1_1 from '@/assets/studentLeisure/SMJ/1/1.jpg'
 import img_smj_1_2 from '@/assets/studentLeisure/SMJ/1/2.jpg'
@@ -116,6 +222,73 @@ interface IEvent {
 }
 
 const EVENTS: IEvent[] = [
+  {
+    title: 'Конкурс Electude Київ 2025 ',
+    images: [
+      img_kyv_1_1, img_kyv_1_2, img_kyv_1_3, img_kyv_1_4, img_kyv_1_5, 
+      img_kyv_1_6, img_kyv_1_7, img_kyv_1_8, img_kyv_1_9, img_kyv_1_10, 
+      img_kyv_1_11, img_kyv_1_12, img_kyv_1_13, img_kyv_1_14, img_kyv_1_15, 
+      img_kyv_1_16, img_kyv_1_17, img_kyv_1_18, img_kyv_1_19, img_kyv_1_20, 
+      img_kyv_1_21, img_kyv_1_22, img_kyv_1_23, img_kyv_1_24, img_kyv_1_25, 
+    ],
+  },
+  {
+    title: 'Конкурс 28.10.2025',
+    images: [
+      img_conc_1_1, img_conc_1_2, img_conc_1_3, img_conc_1_4, img_conc_1_5, 
+      img_conc_1_6, img_conc_1_7, img_conc_1_8, img_conc_1_9, img_conc_1_10, img_conc_1_11,  
+    ],
+  },
+  {
+    title: 'Екскурсія на ТОВ Технологія 4.04.2025',
+    images: [
+      img_tech_1_1, img_tech_1_4, img_tech_1_5, 
+      img_tech_1_6,  img_tech_1_7,   img_tech_1_8, img_tech_1_9, img_tech_1_10,
+      img_tech_1_11, img_tech_1_12, img_tech_1_13, img_tech_1_14, img_tech_1_15,
+      img_tech_1_16, img_tech_1_17,
+    ],
+  },
+  {
+    title: 'Зустріч ГБЦ 03.10.2025',
+    images: [
+      img_gbc_1_1, img_gbc_1_2, img_gbc_1_3, img_gbc_1_4, img_gbc_1_5, 
+      img_gbc_1_6,  img_gbc_1_7,   img_gbc_1_8,
+    ],
+  },
+  {
+    title: 'Зустріч TIR SERVICE Федус 20.05.2025',
+    images: [
+      img_tir_1_1, img_tir_1_2, img_tir_1_3, img_tir_1_4, img_tir_1_5,
+      img_tir_1_6,  img_tir_1_7,
+    ],
+  },
+  {
+    title: 'Філармонія 13.03.2025',
+    images: [
+      img_fil_1_1, img_fil_1_2, img_fil_1_3, 
+    ],
+  },
+  {
+    title: 'Екскурсія ТОВ Борднетце Україна',
+    images: [
+      img_brt_1_1, img_brt_1_2, img_brt_1_3, img_brt_1_4, img_brt_1_5,
+    ],
+  },
+  {
+    title: 'Екскурсія на ТОЙОТУ 30.10.2024',
+    images: [
+      img_tyt_1_1, img_tyt_1_2, img_tyt_1_3, img_tyt_1_4, img_tyt_1_5,
+      img_tyt_1_6, img_tyt_1_7, img_tyt_1_8,  img_tyt_1_9,  img_tyt_1_10,  img_tyt_1_11,
+
+    ],
+  },
+    {
+    title: 'Конкурс 29.10.2024',
+    images: [
+      img_conc_2_1, img_conc_2_2, img_conc_2_3, img_conc_2_4, img_conc_2_5, 
+      img_conc_2_6, img_conc_2_7, img_conc_2_8, img_conc_2_9, img_conc_2_10, img_conc_2_11,  
+    ],
+  },
   {
     title: 'Тиждень автомобіліста',
     images: [

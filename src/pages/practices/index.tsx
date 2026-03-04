@@ -3,11 +3,11 @@ import { MainLayout } from '../../layouts/main'
 import styles from './index.module.scss'
 
 const PRACTICES = [
-  { title: 'Слюсарно-механічна', url: 'https://eguru1.tk.te.ua/course/view.php?id=748' },
+  // { title: 'Слюсарно-механічна', url: 'https://eguru1.tk.te.ua/course/view.php?id=748' },
   { title: 'Електромонтажна практика', url: 'https://eguru1.tk.te.ua/course/view.php?id=750' },
   { title: 'Практика на засобах вимірювальної техніки', url: 'https://eguru1.tk.te.ua/course/view.php?id=751' },
   { title: 'Практика з використанням комп\'ютерної та мікропроцесорної техніки', url: 'https://eguru1.tk.te.ua/course/view.php?id=752' },
-  { title: 'Практика для отримання робітничої професії', url: 'https://eguru1.tk.te.ua/course/view.php?id=754' },
+  // { title: 'Практика для отримання робітничої професії', url: 'https://eguru1.tk.te.ua/course/view.php?id=754' },
   { title: 'Технологічна практика', url: 'https://eguru1.tk.te.ua/course/view.php?id=755' },
   { title: 'Переддипломна практика', url: 'https://eguru1.tk.te.ua/course/view.php?id=756' },
 ]

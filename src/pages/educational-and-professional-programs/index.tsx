@@ -2,7 +2,8 @@ import { ExternalLink, CheckCircle2, BookOpen, Briefcase } from 'lucide-react'
 import { MainLayout } from '../../layouts/main'
 import styles from './index.module.scss'
 
-const OPP_URL = 'https://tk.te.ua/wp-content/uploads/2024/02/%D0%9E%D0%9F%D0%9F_%D0%A4%D0%9C%D0%91_141_%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D0%B5%D1%82%D0%B8%D0%BA%D0%B0_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D1%96%D0%BA%D0%B0_2023.pdf'
+const OPP_URL_2025 = 'https://tk.te.ua/wp-content/uploads/2026/01/opp_fmb_g3_elektrychna_inzheneriya_2025.pdf'
+const OPP_URL_2023 = 'https://tk.te.ua/wp-content/uploads/2024/02/%D0%9E%D0%9F%D0%9F_%D0%A4%D0%9C%D0%91_141_%D0%95%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B5%D1%80%D0%B3%D0%B5%D1%82%D0%B8%D0%BA%D0%B0_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0_%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D1%96%D0%BA%D0%B0_2023.pdf'
 
 const DIRECTIONS = [
   'Технічне обслуговування та ремонт електричних та електронних систем',
@@ -68,9 +69,9 @@ export const EducationalAndProfessionalPrograms = () => {
             </p>
           </div>
 
-          {/* Банер з посиланням на ОПП */}
+          {/* Банер з посиланням на ОПП 2025 року */}
           <a
-            href={OPP_URL}
+            href={OPP_URL_2025}
             target="_blank"
             rel="noopener noreferrer"
             className={styles.opp_banner}
@@ -79,7 +80,29 @@ export const EducationalAndProfessionalPrograms = () => {
               <p className={styles.opp_banner_label}>Офіційний документ</p>
               <p className={styles.opp_banner_title}>
                 Освітньо-професійна програма «Обслуговування і ремонт
-                електричних та електронних систем автомобілів»
+                електричних та електронних систем автомобілів» 2025р
+              </p>
+              <p className={styles.opp_banner_note}>
+                Розміщено на сайті коледжу tk.te.ua
+              </p>
+            </div>
+            <div className={styles.opp_banner_icon}>
+              <ExternalLink size={22} />
+            </div>
+          </a>
+
+          {/* Банер з посиланням на ОПП 2023 року */}
+          <a
+            href={OPP_URL_2023}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.opp_banner}
+          >
+            <div className={styles.opp_banner_text}>
+              <p className={styles.opp_banner_label}>Офіційний документ</p>
+              <p className={styles.opp_banner_title}>
+                Освітньо-професійна програма «Обслуговування і ремонт
+                електричних та електронних систем автомобілів» 2023р
               </p>
               <p className={styles.opp_banner_note}>
                 Розміщено на сайті коледжу tk.te.ua
