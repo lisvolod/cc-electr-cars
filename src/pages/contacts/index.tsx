@@ -41,6 +41,15 @@ export const Contacts = () => {
                     <span className={styles.contact_value}>+38-066-923-48-81</span>
                   </div>
                 </a>
+                <a href="tel:+380974949197" className={styles.contact_item}>
+                  <div className={styles.contact_icon}>
+                    <Phone size={18} />
+                  </div>
+                  <div className={styles.contact_info}>
+                    <span className={styles.contact_label}>Телефон</span>
+                    <span className={styles.contact_value}>+38-097-494-91-97</span>
+                  </div>
+                </a>
 
                 <a href="mailto:ck141eee@gmail.com" className={styles.contact_item}>
                   <div className={styles.contact_icon}>
@@ -64,6 +73,7 @@ export const Contacts = () => {
                   <div className={styles.contact_info}>
                     <span className={styles.contact_label}>Адреса</span>
                     <span className={styles.contact_value}>
+                      Аудиторії: 211В, 308 та 310<br />
                       вул. Леся Курбаса, 13, Тернопіль, 46016<br />
                       ВСП Тернопільський фаховий коледж ТНТУ імені Івана Пулюя
                     </span>
