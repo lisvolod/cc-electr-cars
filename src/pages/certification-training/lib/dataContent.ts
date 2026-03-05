@@ -50,6 +50,12 @@ import img_chap_06 from '@/assets/qualification/chaply/06.jpg'
 import img_vrb_01 from '@/assets/qualification/vorobets/01.jpg'
 import img_vrb_02 from '@/assets/qualification/vorobets/02.jpg'
 import img_vrb_03 from '@/assets/qualification/vorobets/03.jpg'
+// Хіта
+import img_kht_01 from "@/assets/qualification/khita/01.jpg"
+import img_kht_02 from "@/assets/qualification/khita/02.jpg"
+import img_kht_03 from "@/assets/qualification/khita/03.jpg"
+import img_kht_04 from "@/assets/qualification/khita/04.jpg"
+import img_kht_05 from "@/assets/qualification/khita/05.jpg"
 
 
 export interface ICertItem {
@@ -138,6 +144,16 @@ export const dataContent: ICertification[] = [
       { type: 'image', src: img_vrb_01 },
       { type: 'image', src: img_vrb_02 },
       { type: 'image', src: img_vrb_03 },
+    ],
+  },
+  {
+    name: 'Хіта Юрій Іванович',
+    items: [
+      { type: 'image', src: img_kht_01 },
+      { type: 'image', src: img_kht_02 },
+      { type: 'image', src: img_kht_03 },
+      { type: 'image', src: img_kht_04 },
+      { type: 'image', src: img_kht_05 },
     ],
   },
 ]
